@@ -1,0 +1,77 @@
+name: Testes
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test_soma:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes de soma
+        run: npx jest tests/soma.test.js
+
+  test_sub:
+    needs: test_soma
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes de subtração
+        run: npx jest tests/subtracao.test.js
+
+  test_mult:
+    needs: test_sub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes de multiplicação
+        run: npx jest tests/multiplicacao.test.js
+
+  test_div:
+    needs: test_mult
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes de divisão
+        run: npx jest tests/divisao.test.js
