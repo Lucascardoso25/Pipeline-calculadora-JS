@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculadora">
+    <div id="visor" class="visor">0</div>
+    <div class="botoes">
+      <button class="operador" data-acao="limpar">C</button>
+      <button class="operador" data-acao="apagar">⌫</button>
+      <button class="operador" data-op="÷">÷</button>
+      <button class="operador" data-op="×">×</button>
+
+      <button data-num="7">7</button>
+      <button data-num="8">8</button>
+      <button data-num="9">9</button>
+      <button class="operador" data-op="-">−</button>
+
+      <button data-num="4">4</button>
+      <button data-num="5">5</button>
+      <button data-num="6">6</button>
+      <button class="operador" data-op="+">+</button>
+
+      <button data-num="1">1</button>
+      <button data-num="2">2</button>
+      <button data-num="3">3</button>
+      <button class="igual" data-acao="igual" style="grid-row: span 2;">=</button>
+
+      <button data-num="0" style="grid-column: span 2;">0</button>
+      <button data-num=".">.</button>
+    </div>
+  </div>
+
+  <script src="calculadora.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
