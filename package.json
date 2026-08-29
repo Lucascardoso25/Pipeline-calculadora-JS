@@ -1,0 +1,12 @@
+{
+  "name": "pipeline-calculadora-js",
+  "version": "1.0.0",
+  "description": "Calculadora em JavaScript com testes automatizados e pipeline de CI no GitHub Actions",
+  "main": "calculadora.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
